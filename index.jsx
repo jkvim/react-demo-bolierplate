@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 /*
-  import your component
+  import your component and replace <App />
 */
 
 function App() {
