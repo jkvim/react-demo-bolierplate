@@ -1,5 +1,5 @@
 {
-  "name": "generator-react-demo-bolierplate",
+  "name": "react-demo-bolierplate",
   "version": "1.0.1",
   "description": "a bolierplate for develop demo conveniently",
   "main": "index.jsx",
@@ -12,8 +12,7 @@
   },
   "keywords": [
     "react",
-    "bolierplate",
-    "yeoman-generator"
+    "bolierplate"
   ],
   "homepage": "https://github.com/jkvim/react-demo-bolierplate#readme",
   "author": {
