@@ -1,12 +1,12 @@
 {
   "name": "generator-react-demo-bolierplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a bolierplate for develop demo conveniently",
   "main": "index.jsx",
   "repository": {
-   "type": "git",
-   "url": "git@github.com:jkvim/react-demo-bolierplate.git"
- },
+    "type": "git",
+    "url": "git@github.com:jkvim/react-demo-bolierplate.git"
+  },
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.js"
   },
@@ -17,10 +17,10 @@
   ],
   "homepage": "https://github.com/jkvim/react-demo-bolierplate#readme",
   "author": {
-  "name": "jkvim",
-  "email": "jkvim@outlook.com",
-  "url": ""
-},
+    "name": "jkvim",
+    "email": "jkvim@outlook.com",
+    "url": ""
+  },
   "license": "MIT",
   "dependencies": {
     "react": "^15.3.1",
