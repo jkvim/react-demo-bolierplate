@@ -8,12 +8,12 @@ This repository help you to try third-party libraries or deveolop a demo as fast
 - webpack dev server
 - react hot reload
 
-## What is different with [react-starter](https://github.com/webpack/react-starter) 
+## What is different with [react-starter](https://github.com/webpack/react-starter)
 - not redux
 - not router
 - not sass complie(may be will add later)
 - not production config
 - not support require markdown
 
-## start
-`npm run dev`
+## Start
+    npm run dev
