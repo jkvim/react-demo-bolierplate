@@ -14,3 +14,6 @@ This repository help you to try third-party libraries or deveolop a demo as fast
 - not sass complie(may be will add later)
 - not production config
 - not support require markdown
+
+## start
+`npm run dev`
