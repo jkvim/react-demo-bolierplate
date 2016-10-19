@@ -4,7 +4,8 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
   entry: [
-    'webpack-dev-server/client?http://locahost:8080',
+    'webpack-dev-server/client?http://localhost:8080/',
+    'webpack/hot/dev-server',
     path.resolve(__dirname, 'index.jsx')],
   output: {
     filename: './bundle.js',
