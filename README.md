@@ -2,7 +2,7 @@
 
 This repository help you to try third-party libraries or deveolop a demo as fast as possible.
 
-## This repository pack up with tool as below
+## Pack up with tools
 - eslint
 - babel with presets es2015, react, stage-0
 - webpack dev server
