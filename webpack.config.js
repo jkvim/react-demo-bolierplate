@@ -1,12 +1,17 @@
 const path = require('path');
 const webpack = require('webpack');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: [
-    'webpack-dev-server/client?http://localhost:8080/',
-    'webpack/hot/dev-server',
-    path.resolve(__dirname, 'index.jsx')],
+  entry: {
+    app: [
+      'webpack-dev-server/client?http://localhost:8080/',
+      'webpack/hot/dev-server',
+      path.resolve(__dirname, 'index.jsx')
+    ],
+  },
+  devtool: '#source-map',
   output: {
     filename: './bundle.js',
   },
@@ -21,6 +26,10 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
+    new HTMLWebpackPlugin({
+      filename: './index.html',
+      template: './index.html',
+    }),
   ],
   module: {
     loaders: [
