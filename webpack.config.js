@@ -46,6 +46,14 @@ module.exports = {
         test: /.html$/,
         loader: 'raw-loader',
       },
+      {
+        test: /\.font\.js$/,
+        loaders: ['style-loader', 'css-loader', 'fontgen-loader?embed'],
+      },
+      {
+        test: /\.(woff|eot|ttf|svg)$/,
+        loaders: ['url-loader', 'file-loader'],
+      },
     ],
   },
 };
