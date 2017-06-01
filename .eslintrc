@@ -6,7 +6,8 @@
     "jasmine": true
   },
   "rules": {
-    "linebreak-style": ["error", "windows"],
+    // "linebreak-style": ["error", "windows"],
+    "linebreak-style": ["error", "unix"],
     "prefer-stateless-function": [0],
     "import/no-extraneous-dependencies": [0]
   }
