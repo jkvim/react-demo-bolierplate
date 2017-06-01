@@ -5,23 +5,21 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: [
-      'webpack-dev-server/client?http://localhost:8080/',
-      'webpack/hot/dev-server',
-      path.resolve(__dirname, 'index.jsx')
-    ],
+    app: path.resolve(__dirname, 'index.js'),
   },
   devtool: '#source-map',
   output: {
+    path: '/dist',
     filename: './bundle.js',
   },
   devServer: {
     hot: true,
     inline: true,
     port: 8080,
+    compress: true,
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -32,14 +30,18 @@ module.exports = {
     }),
   ],
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx$/,
-        loader: 'babel',
+        test: /\.js$/,
+        loader: 'babel-loader',
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass'],
+        use: [
+          'style-loader',
+          'css-loader?importLoaders=1&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+          'sass-loader',
+        ],
       },
     ],
   },
