@@ -8,7 +8,7 @@
     "url": "git@github.com:jkvim/react-demo-bolierplate.git"
   },
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.config.js"
+    "start": "webpack-dev-server --config webpack.config.js"
   },
   "keywords": [
     "react",
