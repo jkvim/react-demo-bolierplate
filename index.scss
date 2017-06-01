@@ -20,7 +20,7 @@ body {
   color: #333;
   background: #FFF;
   padding: 50px 48px 0;
-  font-family: sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #wrap {
@@ -30,7 +30,7 @@ body {
 }
 
 #menu {
-  width: 150px;
+  width: 160px;
   margin: 0;
 }
 
@@ -65,16 +65,23 @@ body {
 
   ul {
     list-style: none;
+    padding: 0;
   }
 
   li {
     line-height: 1.3em;
     margin-bottom: 18px;
 
+    i {
+      font-size: 28px;
+    }
+
     a {
       color: #34AC98;
       font-style: italic;
       text-decoration: none;
+      margin-left: 5px;
+      vertical-align: middle;
 
       &:hover {
         color: #EC6635;
@@ -91,12 +98,17 @@ body {
     border-bottom: 1px dashed #E5E5E5;
     border-top: 1px dashed #E5E5E5;
     display: flex;
+    align-items: center;
+
+    i {
+      font-size: 28px;
+      margin: auto 15px;
+    }
 
     .tip {
       width: 500px;
-      margin-left: 40px;
+      margin-right: 10px;
       font-size: 0.75em;
-      font-family: Georgia, 'Times New Roman', Times, serif;
       font-style: italic;
       line-height: 1.2em;
     }
@@ -131,7 +143,6 @@ body {
     .slide {
       width: 100%;
       height: 445px;
-      font-family: Georgia, 'Times New Roman', Times, serif;
       font-style: italic;
 
       h1 {
@@ -184,7 +195,6 @@ body {
             text-shadow: 0 1px 0 #FAFDFC;
             text-decoration: none;
             box-sizing: border-box;
-            font-family: Georgia, 'Times New Roman', Times, serif;
             border-right: 1px solid #D3EDE9;
             background: #EFF8F7;
 
@@ -240,14 +250,12 @@ body {
       h1 {
         margin: 10px 0px;
         color:  $link-color;
-        font-family: Georgia, 'Times New Roman', Times, serif;
         font-weight: normal;
         font-size: 16px;
         line-height: 1.3em;
       }
 
       p {
-        font-family: Georgia, 'Times New Roman', Times, serif;
         line-height: 1.45em;
         font-size: 14px;
       }
@@ -269,11 +277,10 @@ body {
 
   .contract-item {
     margin-bottom: 32px;
-    padding-right: 20px;
+    padding-right: 7px;
 
     p {
       font-size: 10px;
-      font-family: Georgia, 'Times New Roman', Times, serif;
       margin-bottom: 15px;
       line-height: 1.75em;
     }
@@ -284,7 +291,6 @@ body {
     padding-bottom: 5px;
     font-weight: normal;
     font-size: 12px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: uppercase;
     border-bottom: 1px dashed #E5E5E5;
   }
@@ -293,27 +299,38 @@ body {
     @extend .button;
 
     display: flex;
-    width: 110px;
-    height: 24px;
-    line-height: 24px;
+    width: 145px;
+    height: 30px;
     font-family: Arial;
-    font-size: 11px;
+    font-size: 0.685em;
     font-style: italic;
     color: $link-color;
-    border: 1px solid #D3EDE9;
+    border: 1px solid #E5E5E5;
     text-align: center;
     padding: 4px 10px;
+    box-sizing: border-box;
+    align-items: center;
 
     &:hover {
       color: $link-highlight-color;
+    }
+
+    i {
+      font-size: 14px;
+    }
+
+    span {
+      width: 120px;
     }
   }
 }
 
 footer {
+  min-height: 70px;
   padding-top: 20px;
   border-top: 2px solid #E5E5E5;
   color: #AAA;
+  position: relative;
 
   .inside-link {
     display: flex;
@@ -328,12 +345,37 @@ footer {
   }
 
   .external-link {
-    float: right;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    display: flex;
+
+    a {
+      font-size: 28px;
+      margin: 0 5px;
+      color: #AAA;
+
+      &:hover {
+        color: #222;
+      }
+    }
   }
 
   a {
     color: #34AC98;
     font-size: 12px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
   }
+}
+
+[class^="icon"] {
+	font-family: 'iconfont';
+	line-height: 1;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	vertical-align: middle;
 }
