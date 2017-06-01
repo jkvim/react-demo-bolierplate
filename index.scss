@@ -1,4 +1,51 @@
-div {
-  font-size: 22px;
-  color: #48e;
+@import "~normalize-scss/sass/normalize/import-now";
+
+body {
+  width: 1080px;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  line-height: 1;
+  color: #333;
+  background: #FFF;
+  padding: 50px 48px 0;
+  font-family: sans-serif;
+}
+
+.logo {
+  background: black;
+  color: white;
+  font-style: oblique;
+  font-size: 18px;
+  font-family: 'Arial';
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  p {
+    width: 80px;
+    margin: 5px auto 0px;
+  }
+
+  sup {
+    top: -15px;
+    left: 35px;
+    font-size: 8px;
+  }
+}
+
+.sidebar {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    color: #34AC98;
+    font-style: italic;
+    line-height: 1.3em;
+  }
 }
