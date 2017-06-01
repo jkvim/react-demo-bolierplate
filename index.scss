@@ -1,5 +1,12 @@
 @import "~normalize-scss/sass/normalize/import-now";
 
+$link-color: #34AC98;
+$link-highlight-color: #EC6635;
+
+.button {
+  border-radius: 5px;
+}
+
 body {
   width: 1080px;
   height: 100%;
@@ -10,6 +17,17 @@ body {
   background: #FFF;
   padding: 50px 48px 0;
   font-family: sans-serif;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#menu {
+  width: 150px;
+  margin: 0;
 }
 
 .logo {
@@ -39,13 +57,163 @@ body {
 }
 
 .sidebar {
+  margin: 50px 0;
+
   ul {
     list-style: none;
   }
 
   li {
-    color: #34AC98;
-    font-style: italic;
     line-height: 1.3em;
+    margin-bottom: 18px;
+
+    a {
+      color: #34AC98;
+      font-style: italic;
+      text-decoration: none;
+
+      &:hover {
+        color: #EC6635;
+      }
+    }
+  }
+}
+
+#content {
+  width: 896px;
+
+  .gallery {
+    .slide {
+      width: 100%;
+      height: 445px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-style: italic;
+
+      h1 {
+        position: absolute;
+        top: 285px;
+        padding: 10px 24px 15px;
+        color: #222;
+        background: #FFF;
+        font-size: 1.2em;
+        margin: 0;
+      }
+
+      h2 {
+        position: absolute;
+        top: 329px;
+        padding: 8px 24px 12px;
+        color: #E9E9E9;
+        font-size: 1em;
+        font-weight: normal;
+        background: #111;
+        margin: 0;
+      }
+
+      h1,h2 {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    nav {
+      ul {
+        list-style: none;
+        display: flex;
+        padding-left: 0px;
+        margin: 0;
+
+        li {
+          a {
+            display: block;
+            width: 224px;
+            line-height: 1.1em;
+            padding: 25px 15px 15px 20px;
+            color: #60BEAE;
+            text-shadow: 0 1px 0 #FAFDFC;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-right: 1px solid #D3EDE9;
+            background: #EFF8F7;
+
+            h3,p {
+              margin: 0;
+            }
+
+            h3 {
+              font-weight: normal;
+              margin-bottom: 3px;
+            }
+
+            p {
+              font-style: italic;
+              font-size: 12px;
+            }
+
+            &:hover {
+              color: #EC6635;
+              background: #D9EFEC;
+            }
+          }
+
+          &:last-child a {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+#contracts {
+  width: 150px;
+
+  .contract-item {
+    margin-bottom: 32px;
+    padding-right: 20px;
+
+    p {
+      font-size: 10px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-bottom: 15px;
+      line-height: 1.75em;
+    }
+  }
+
+  h3 {
+    margin: 0 0 9px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #E5E5E5;
+  }
+
+  a {
+    @extend .button;
+
+    display: flex;
+    width: 110px;
+    height: 24px;
+    line-height: 24px;
+    font-family: Arial;
+    font-size: 11px;
+    font-style: italic;
+    color: $link-color;
+    border: 1px solid #D3EDE9;
+    text-align: center;
+    padding: 4px 10px;
+
+    &:hover {
+      color: $link-highlight-color;
+    }
   }
 }
