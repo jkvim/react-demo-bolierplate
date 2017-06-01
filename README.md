@@ -16,4 +16,4 @@ This repository help you to try third-party libraries or deveolop a demo as fast
 - no support require markdown
 
 ## Start
-    npm run dev
+    npm start
