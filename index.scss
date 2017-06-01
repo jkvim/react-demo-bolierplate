@@ -82,6 +82,47 @@ body {
 #content {
   width: 896px;
 
+  .subscription {
+    margin: 15px 0px;
+    border-bottom: 1px dashed #E5E5E5;
+    border-top: 1px dashed #E5E5E5;
+    display: flex;
+
+    .tip {
+      width: 500px;
+      margin-left: 40px;
+      font-size: 0.75em;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-style: italic;
+      line-height: 1.2em;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+
+      input {
+        border: 1px solid;
+        border-color: #848484 #c1c1c1 #e1e1e1;
+        width: 260px;
+        font-size: 14px;
+        padding: 2px;
+      }
+
+      button {
+        margin-left: 10px;
+        border-radius: 4px;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+        border: 1px solid;
+        border-color: #ddd #bbb #999;
+        font-size: 12px;
+        font-weight: bold;
+        outline: 0;
+        padding: 3px 10px;
+      }
+    }
+  }
+
   .gallery {
     .slide {
       width: 100%;
