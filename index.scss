@@ -136,7 +136,7 @@ body {
 
       h1 {
         position: absolute;
-        top: 285px;
+        top: 383px;
         padding: 10px 24px 15px;
         color: #222;
         background: #FFF;
@@ -146,7 +146,7 @@ body {
 
       h2 {
         position: absolute;
-        top: 329px;
+        top: 428px;
         padding: 8px 24px 12px;
         color: #E9E9E9;
         font-size: 1em;
@@ -155,7 +155,7 @@ body {
         margin: 0;
       }
 
-      h1,h2 {
+      a {
         &:hover {
           opacity: 0.8;
         }
@@ -307,5 +307,33 @@ body {
     &:hover {
       color: $link-highlight-color;
     }
+  }
+}
+
+footer {
+  padding-top: 20px;
+  border-top: 2px solid #E5E5E5;
+  color: #AAA;
+
+  .inside-link {
+    display: flex;
+    a {
+      padding: 0 3px;
+      border-right: 1px solid #AAA;
+
+      &:last-child {
+        border-right: none;
+      }
+    } 
+  }
+
+  .external-link {
+    float: right;
+  }
+
+  a {
+    color: #34AC98;
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
 }
