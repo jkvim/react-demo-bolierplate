@@ -145,25 +145,31 @@ body {
       height: 445px;
       font-style: italic;
 
+      h1,h2 {
+        box-sizing: border-box;
+        padding: 0 10px;
+        margin: 0;
+      }
+
       h1 {
         position: absolute;
-        top: 383px;
-        padding: 10px 24px 15px;
+        top: 388px;
         color: #222;
         background: #FFF;
         font-size: 1.2em;
-        margin: 0;
+        height: 40px;
+        line-height: 40px;
       }
 
       h2 {
         position: absolute;
         top: 428px;
-        padding: 8px 24px 12px;
         color: #E9E9E9;
         font-size: 1em;
+        height: 30px;
+        line-height: 30px;
         font-weight: normal;
         background: #111;
-        margin: 0;
       }
 
       a {
