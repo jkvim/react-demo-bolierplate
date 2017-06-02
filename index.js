@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
 
 if (process.env.NODE_ENV !== 'production') {
   require('./index.html'); // eslint-disable-line global-require
@@ -12,7 +11,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 function App() {
   return (
-    <div>Hello Genius</div>
+    <div />
   );
 }
 

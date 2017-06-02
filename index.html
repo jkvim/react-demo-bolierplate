@@ -3,8 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>react demo bolierplate</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="webworker/imageManips.js"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <div class="container">
+      <div class="half" id="time-animation">
+        <h2>Jank Timer</h2>
+      </div>
+      <div class="half" id="image-manipulator">
+        <h2>Image Manipulator</h2>
+        <input type="file" id="imageLoader" name="imageLoader"/>
+        <button id="invert">Invert</button>
+        <button id="chroma">Chroma</button>
+        <button id="greyscale">Greyscale</button>
+        <button id="vibrant">Vibrant</button>
+        <button id="revert">Revert to Original</button>
+        <canvas id="image"></canvas>
+      </div>
+    </div>
+
+    <script src="webworker/time-animator.js"></script>
+    <script src="webworker/image-app.js"></script>
   </body>
 </html>
