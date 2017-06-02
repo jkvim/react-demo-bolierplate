@@ -439,5 +439,57 @@ footer {
       }
     }
   }
+}
 
+@media (max-width: 991px) and (min-width: 768px) {
+  body {
+    width: 712px;
+    padding: 20px;
+  }
+
+  #wrap {
+    flex-direction: column;
+  }
+
+  #menu {
+    width: 100%; 
+
+    header {
+      width: 712px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      nav {
+        margin: 0;
+
+        ul {
+          display: flex;
+
+          li {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+
+            i {
+              text-align: center;
+            }
+
+            a {
+              margin: 10px 10px 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #contracts {
+    display: none;
+  }  
+
+  #content {
+    width: 712px;
+  }
 }
