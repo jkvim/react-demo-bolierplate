@@ -235,12 +235,13 @@ body {
       padding: 10px;
 
       img {
-        width: 185px;
+        width: 100%;
         height: 110px;
         padding: 10px;
         background: #FFF;
         border: 1px solid #E5E5E5;
         box-shadow: 1px 1px 3px #F5F5F5;
+        box-sizing: border-box;
 
         &:hover {
           opacity: 0.75;
