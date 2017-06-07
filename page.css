@@ -1,0 +1,37 @@
+body {
+    font-size: 14px;
+}
+
+.header {
+    height: 40px;
+    padding: 0 20px;
+    color: #AAAAAA;
+    text-align: right;
+    background-color: #111111;
+}
+
+.header .link {
+    margin: 13px 0 13px 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.header .link:hover {
+    color: #34AC98;
+}
+
+.body {
+    padding-top: 10px;
+}
+
+.body .formWrap {
+    width: 300px;
+    padding: 10px;
+    background-color: #EFF8F7;
+}
+
+.body .panelTitle {
+    color: #34AC98;
+    font-size: 22px;
+    font-weight: 400;
+}
