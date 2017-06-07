@@ -1,42 +1,56 @@
-function doSetItem() {
-    var name = document.forms.editor.name.value;
-    var data = document.forms.editor.data.value;
-    localStorage.setItem(name, data);
+var storageObject = localStorage;
+
+function changeStorage(event) {
+    var target = event.target;
+    if (storageObject === window.localStorage) {
+        storageObject = window.sessionStorage;
+        target.innerHTML = '当前存储介质为sessionStorage';
+    } else {
+        storageObject = window.localStorage;
+        target.innerHTML = '当前存储介质为localStorage';
+    }
     doShowAll();
 }
 
-function doGetItem() {
-    var name = document.forms.editor.name.value;
-    document.forms.editor.data.value = localStorage.getItem(name);
+function doSetItem() {
+    var nameInput = document.querySelector('#name');
+    var countInput = document.querySelector('#count');
+    storageObject.setItem(nameInput.value, countInput.value);
+    nameInput.value = '';
+    countInput.value = '';
     doShowAll();
 }
 
 function doRemoveItem(event) {
     var key = event.target.getAttribute('data-key');
-    localStorage.removeItem(key);
+    storageObject.removeItem(key);
     doShowAll();
 }
 
 function doClear() {
-    localStorage.clear();
+    storageObject.clear();
     doShowAll();
 }
 
 function doShowAll() {
-    var key = "",
-        pairs = "<tr><th>商品名称</th><th>商品数量</th><th>操作</th></tr>\n";
-    for (var i = localStorage.length - 1; i >= 0; i--) {
-        key = localStorage.key(i);
-        pairs = pairs + "<tr><td>"
-            + key + "</td>\n<td>"
-            + localStorage.getItem(key)
-            + "</td>\n<td>"
-            + "<input type='button' data-key='" + key
-            + "' value='删除' onclick='doRemoveItem(event)'>"
-            + "</td></tr>\n";
+    document.querySelector('.listContent').innerHTML = createHTML(storageObject);
+}
+
+function createHTML(tempList) {
+    if (tempList.length < 1) {
+        return '<li><span>购物车内没有商品</span></li>';
     }
-    if (localStorage.length === 0) {
-        pairs += "<tr><td colspan='3'>购物车内没有商品</td></tr>\n";
+    var tempHTML = '';
+    for (var itemName in tempList) {
+        var value = storageObject.getItem(itemName);
+        tempHTML = tempHTML +
+            '<li>' +
+            '<span>' + itemName + '</span>' +
+            '<span>' + value + '</span>' +
+            '<span>' +
+            '<a onclick="doRemoveItem(event)" class="btn" data-key="' + itemName + '">删除</a>' +
+            '</span>' +
+            '</li>';
     }
-    document.getElementById('pairs').innerHTML = pairs;
+    return tempHTML;
 }

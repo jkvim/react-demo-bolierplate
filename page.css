@@ -2,6 +2,33 @@ body {
     font-size: 14px;
 }
 
+button {
+    height: 24px;
+    padding: 3px 6px;
+    font-size: 14px;
+    color: #34AC98;
+    border: 0 none;
+    cursor: pointer;
+    outline: 0 none;
+    line-height: 16px;
+    border-radius: 3px;
+    border: 1px solid #34AC98;
+    -webkit-appearance: none;
+    background-color: #FFFFFF;
+}
+
+
+button:hover {
+    color: #FFFFFF;
+    background-color: #34AC98;
+}
+
+button:active {
+    color: #34AC98;
+    background-color: #FFFFFF;
+}
+
+/*头部*/
 .header {
     height: 40px;
     padding: 0 20px;
@@ -20,17 +47,99 @@ body {
     color: #34AC98;
 }
 
+/*内容*/
 .body {
+    display: flex;
     padding-top: 10px;
 }
 
 .body .formWrap {
+    margin-right: 10px;
     width: 300px;
     padding: 10px;
     background-color: #EFF8F7;
 }
 
+.body .formWrap .infos {
+}
+
+.body .formWrap .infos .inputWrap {
+    display: block;
+    padding: 8px 28px;
+}
+
+.body .formWrap .infos .inputText {
+    font-size: 14px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    outline: 0 none;
+    font-family: 'Arial';
+    border: 1px solid #E1E9E8;
+}
+
+.body .formWrap .infos .inputText:focus {
+    border-color: #34AC98;
+}
+
+.body .cartWrap {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #EFF8F7;
+}
+
+.body .cartWrap .listWrap {
+    padding: 8px 0;
+    overflow: hidden;
+}
+
+.body .cartWrap .listWrap .listHeader, .body .cartWrap .listWrap .listContent > li {
+    display: flex;
+    font-size: 0;
+    margin-bottom: 4px;
+}
+
+.body .cartWrap .listWrap .listContent > li {
+    margin-bottom: 2px;
+}
+
+.body .cartWrap .listWrap .listContent {
+    color: #666666;
+}
+
+.body .cartWrap .listWrap .listHeader span, .body .cartWrap .listWrap .listContent span {
+    flex: 1;
+    margin-right: 2px;
+    padding: 8px 0;
+    font-size: 16px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.body .cartWrap .listWrap .listContent span {
+    font-size: 14px;
+}
+
+.body .cartWrap .listWrap .listHeader span:last-child, .body .cartWrap .listWrap .listContent span:last-child {
+    margin-right: 0;
+}
+
+.body .cartWrap .listWrap .listContent span .btn {
+    cursor: pointer;
+    color: #34AC98;
+    opacity: 0.6;
+}
+
+.body .cartWrap .listWrap .listContent span .btn:hover {
+    opacity: 1;
+}
+
+.body .cartWrap .listWrap .cleanWrap{
+    margin-top: 20px;
+}
+
 .body .panelTitle {
+    margin-bottom: 14px;
     color: #34AC98;
     font-size: 22px;
     font-weight: 400;
